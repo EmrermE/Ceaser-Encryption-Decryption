@@ -1,4 +1,4 @@
-def encrypt_decrypt(message, key):
+def encrypt(message, key):
     alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz " #You can change the alphabet as you want
     letters = list(alphabet)
     thisdict = {letters[i]: i for i in range(len(letters))}
@@ -16,6 +16,7 @@ def decrypt(message, key):
     for i in message:
         decryption += dictthis[((thisdict[i] - key) % len(thisdict))]
     return decryption
+
 
 
 
